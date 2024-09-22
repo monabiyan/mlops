@@ -15,6 +15,7 @@ spec:
       containers:
       - name: flask-iris-container
         image: flask-iris-app:latest
+        imagePullPolicy: IfNotPresent  # Ensures the image is not pulled from a registry
         ports:
         - containerPort: 5000
 ---
